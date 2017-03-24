@@ -1,0 +1,18 @@
+<ion-view view-title="{{evenement.title}}">
+  <ion-content class="padding">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap">
+          <img ng-src="{{evenement.user_img}}">
+          <h2>{{evenement.user_firstname}} {{evenement.user_lastname}}</h2>
+          
+      </ion-item>
+    </ion-header-bar>
+    <ion-content>
+      <button class="button button-full button-positive" ng-click="getImageSaveContact()">
+                    Get Image and Save a Contact with It
+                </button>
+                <img ng-src="{{collection.selectedImage}}" style="width:100%; height: auto;"/>
+    </ion-content>
+
+
+  </ion-content>
+</ion-view>

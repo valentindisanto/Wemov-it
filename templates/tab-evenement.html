@@ -1,0 +1,29 @@
+﻿<ion-view view-title="Wemov'it"><img src="./img/wemovitpetit.png"/>
+    <ion-content>
+        <ion-list>
+            <div ng-repeat="evenement in evenements track by evenement.id_evenement" ng-click="goToEvenement(evenement.id_evenement)">
+                <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap">
+                <div class="item item-body" >
+                    <p>{{evenement.city_name}}</p>
+                    
+                    
+
+                    <h2>{{evenement.user_firstname}} {{evenement.user_lastname}}</h2>
+                    
+                    
+                    <p>{{evenement.title}}</p>
+                    <p>{{evenement.description}}</p>
+                </div>
+            </ion-item>
+
+
+
+                
+              
+                
+                
+            </div>
+            
+        </ion-list>
+    </ion-content>
+</ion-view>

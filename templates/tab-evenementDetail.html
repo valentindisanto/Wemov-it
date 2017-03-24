@@ -1,0 +1,37 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{evenement.title}}">
+  <ion-content class="padding">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap">
+          <img ng-src="{{evenement.user_img}}">
+          <h2>{{evenement.user_firstname}} {{evenement.user_lastname}}</h2>
+          
+      </ion-item>
+      <div class="item item-body">
+          <p>{{evenement.description}}</p>
+      </div>
+      
+  <ion-content>
+  <div class="item">
+      <ion-scroll direction="x">
+        <img ng-repeat="picture in image" ng-src="{{picture.src}}" class="picture-thumb"/>
+      </ion-scroll>
+  </div>
+  </ion-content>
+  
+
+     
+      <ion-gallery ion-gallery-items="items"></ion-gallery>
+       <ion-gallery ion-gallery-items="items" ion-gallery-row="5"></ion-gallery>
+  </ion-content>
+   <ion-footer-bar class="bar bar-positive">
+      <div class="button-bar">
+        <button class="button icon-left ion-camera" ng-click="loadImage()">Prendre une Photo</button>
+        <button class="button icon-left ion-upload" ng-click="uploadImage()" ng-disabled="image === null">Ajouter une photo</button>
+      </div>
+  </ion-footer-bar>
+</ion-view>
